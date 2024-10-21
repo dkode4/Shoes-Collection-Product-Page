@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jordan Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="imgBx">
+            <img src="assets/images/jordan1chicago.png" >
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2>Jordans<br>
+                    <span>Jordan Collection</span>
+                </h2>
+               
+                <div class="navbar">
+                    <a href="">
+                        <div class="cart">
+                            <i style="text-decoration: none; color: black;" 
+                            color: white; class="bi bi-cart2"></i>
+                      
+                            <div id="cartAmount" class="cartAmount">0</div>
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="colorfulsquares">
+                    <div class="square" id="jordan4militaryblack"></div>
+                    <div class="square" id="jordan4unc"></div>
+                    <div class="square" id="jordan4thunderred"></div>
+                    <div class="square" id="jordan4infrared"></div>
+                    <div class="square" id="jordan11bred"></div>
+                    <div class="square" id="jordan11coolgray"></div>
+                    <div class="square" id="jordan11cherry"></div>
+                    <div class="square" id="jordan11concord"></div>
+                    <div class="square" id="jordan1chicago"></div>
+                    <div class="square" id="jordan1unc"></div>
+                    <div class="square" id="jordan1fearless"></div>
+                    
+                </div>
+                <div class="options">
+                    <select class="optionList" id="optionList">
+                        <option value="">--Please choose an option--</option>
+                        <option value="M5.5">M-UK-5.5</option>
+                        <option value="M6">M-UK-6</option>
+                        <option value="M6.5">M-UK-6.5</option>
+                        <option value="M7">M-UK-7</option>
+                        <option value="M7.5">M-UK-7.5</option>sele
+                        <option value="M8">M-UK-8</option>
+                        <option value="M8.5">M-UK-8.5</option>
+                        <option value="M9">M-UK-9</option>
+                        <option value="M9.5">M-UK-9.5</option>
+                        <option value="M10">M-UK-10</option>
+                        <option value="M10.5">M-UK-10.5</option>
+                        <option value="M11">M-UK-11</option>
+                        <option value="M11.5">M-UK-11.5</option>
+                        <option value="M12">M-UK-12</option>
+
+                        <option value="W2">W-UK-2</option>
+                        <option value="W2.5">W-UK-2.5</option>
+                        <option value="W3">W-UK-3</option>
+                        <option value="W3.5">W-UK-3.5</option>
+                        <option value="W4">W-UK-4</option>
+                        <option value="W4.5">W-UK-4.5</option>
+                        <option value="W5">W-UK-5</option>
+                        <option value="W5.5">W-UK-5.5</option>
+                        <option value="W6">W-UK-6</option>
+                        <option value="W6.5">W-UK-6.5</option>
+                        <option value="W7">W-UK-7</option>
+                        <option value="W7.5">W-UK-7.5</option>
+                        <option value="W8">W-UK-8</option>
+                        <option value="W8.5">W-UK-8.5</option>
+                        <option value="W9">W-UK-9</option>
+                        <option value="W9.5">W-UK-9.5</option>
+                        <option value="W10">W-UK-10</option>
+                    </select>
+
+
+                </div>                
+                <div class="buttons">
+                    <a href="">
+                    <button  class="viewcart">Back</button></a>
+                    <button onclick="increment(itemID)" class="addcart">Add to cart</button>
+                </div>
+        </div>
+    </div>
+    
+                
+<script>
+    const imgBx = document.querySelector('.imgBx img');
+    const squares = document.querySelectorAll('.square');
+        squares.forEach(square => {
+            square.addEventListener('click', () => {
+            const squareId = square.id;
+            let imageUrl = '';
+            if (squareId === 'jordan4militaryblack') {
+                imageUrl = 'assets/images/jordan4militaryblack.png'; 
+            } else if (squareId === 'jordan4unc') {
+                imageUrl = 'assets/images/jordan4unc.png'; 
+            } else if (squareId === 'jordan4thunderred') {
+                imageUrl = 'assets/images/jordan4thunderred.png'; 
+            } else if (squareId === 'jordan4infrared') {
+                imageUrl = 'assets/images/jordan4infrared.png'; 
+            } else if (squareId === 'jordan11bred') {
+                imageUrl = 'assets/images/jordan11bred.png';
+            }else if (squareId === 'jordan11coolgray') {
+                imageUrl = 'assets/images/jordan11coolgray.png'; 
+            }else if (squareId === 'jordan11cherry') {
+                imageUrl = 'assets/images/jordan11cherry.png'; 
+            }else if (squareId === 'jordan11concord') {
+                imageUrl = 'assets/images/jordan11concord.png'; 
+            }else if (squareId === 'jordan1chicago') {
+                imageUrl = 'assets/images/jordan1chicago.png'; 
+            }else if (squareId === 'jordan1unc') {
+                imageUrl = 'assets/images/jordan1unc.png'; 
+            }else if (squareId === 'jordan1fearless') {
+                imageUrl = 'assets/images/jordan1fearless.png'; 
+            }
+            
+            imgBx.src = imageUrl;
+        });
+    });
+</script>
+</body>
+</html>
